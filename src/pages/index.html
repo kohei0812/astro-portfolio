@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamis</title>
+    <link rel="stylesheet" href="https://use.typekit.net/xzb4efj.css" />
+    <link rel="stylesheet" href="../assets/styles/style.css" />
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- jQuery CDN（最新版） -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  </head>
+  <body>
+    <!-- fixed -->
+    <!-- loader -->
+    <div class="loader-wrapper" role="presentation">
+      <div class="loader" aria-hidden="true"></div>
+    </div>
+    <!-- sp-nav -->
+    <nav class="sp-nav" aria-label="スマートフォン用ナビゲーション">
+      <ul class="menu">
+        <li class="menu__item">
+          <a href="#" class="menu__link">プロフィール</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">制作実績</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">料金プラン</a>
+        </li>
+      </ul>
+      <ul class="sp-sns" aria-label="SNSリンク">
+        <li class="sp-sns__item">
+          <a
+            href="#"
+            target="_blank"
+            class="sp-sns__link"
+            aria-label="facebook"
+          >
+            <img src="../../public/assets/images/facebook.svg" alt="facebook" />
+          </a>
+        </li>
+        <li class="sp-sns__item">
+          <a
+            href="#"
+            target="_blank"
+            class="sp-sns__link"
+            aria-label="instagram"
+          >
+            <img src="../../public/assets/images/instagram.svg" alt="instagram" />
+          </a>
+        </li>
+        <li class="sp-sns__item">
+          <a href="#" target="_blank" class="sp-sns__link" aria-label="x">
+            <img src="../../public/assets/images/x.svg" alt="x" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- humburger -->
+    <button
+      class="hamburger-menu"
+      id="js-hamburger-menu"
+      aria-label="メニューを開く"
+    >
+      <span class="hamburger-menu__bar"></span>
+      <span class="hamburger-menu__bar"></span>
+      <span class="hamburger-menu__bar"></span>
+    </button>
+    <!-- header -->
+    <header class="header" id="header" role="banner">
+      <div class="container">
+        <a href="#" class="header-logo" aria-label="トップページへ">
+          <img src="../../public/assets/images/logo.svg" alt="ロゴ画像" />
+        </a>
+        <nav class="header-nav" aria-label="メインナビゲーション">
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="#" class="menu__link">プロフィール</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">制作実績</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">料金プラン</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- main -->
+    <main id="top" class="stickyStack-parent" role="main">
+      <!-- hero -->
+      <section
+        class="hero stickyStack-child"
+        id="hero"
+        aria-labelledby="hero-heading"
+      >
+        <div class="container">
+          <h1 class="hero-ttl">
+            想いを響かせ、<br />
+            未来を創る
+          </h1>
+        </div>
+        <p class="hero-sub-title">
+          フロントエンドエンジニア川端康平のポートフォリオサイトです。 <br />
+          <span class="eng"
+            >This is the portfolio site of Kohei Kawabata, a front-end
+            engineer.</span
+          >
+        </p>
+      </section>
+      <div class="stickyStack-child">
+        <!-- challenges -->
+        <section
+          class="challenges"
+          id="challenges"
+          aria-labelledby="challenges-heading"
+        >
+          <div class="challenges-bg__img"></div>
+          <div class="challenges-bg"></div>
+          <h2 class="challenges-ttl eng" id="challenges-heading">
+            Your Challenges
+          </h2>
+          <div class="container">
+            <p class="challenges-sub">こんなお悩みありませんか？</p>
+            <ul class="challenges-list">
+              <li class="challenges-list__item">
+                <p>
+                  ホームページを作ったものの、デザインが素人感満載で不安・・・
+                </p>
+              </li>
+              <li class="challenges-list__item">
+                <p>何年も更新されていないサイトに、お客様が来ているか心配</p>
+              </li>
+              <li class="challenges-list__item">
+                <p>外国人観光客向けに英語対応をしたいけど方法がわからない</p>
+              </li>
+              <li class="challenges-list__item">
+                <p>アクセス数や問い合わせが伸び悩んでいる理由がわからない</p>
+              </li>
+              <li class="challenges-list__item">
+                <p>自分で更新するつもりだったけど、忙しくて結局放置中</p>
+              </li>
+              <li class="challenges-list__item">
+                <p>
+                  制作会社に聞きづらい小さな相談を気軽に相談できる相手がいない
+                </p>
+              </li>
+            </ul>
+            <p class="challenges-catch">
+              そのお悩み、<br />
+              まるっとお任せください！
+            </p>
+            <div class="challenges-cta cta">
+              <p class="cta-p">無料で相談してみる</p>
+              <a
+                href="https://x.com/dj_cherrrrryboy"
+                target="_blank"
+                class="cta-link"
+                rel="noopener noreferrer"
+                >詳しくはこちら</a
+              >
+            </div>
+          </div>
+        </section>
+        <!-- profile -->
+        <section class="profile" id="profile" aria-labelledby="profile-heading">
+          <div class="profile-bg"></div>
+          <div class="container">
+            <h2 class="profile-ttl eng section-ttl" id="profile-heading">Profile</h2>
+            <p class="profile-name">
+              川端 康平<br />
+              <span class="eng">Kohei Kawabata</span>
+            </p>
+            <div class="profile-main">
+              <div class="profile-main__left">
+                <img src="../../public/assets/images/profile-main.jpg" alt="顔写真" />
+              </div>
+              <p class="profile-main__right desc">
+                神戸大学法学部卒業後、新卒でSIerに営業職で入社するものの、レールに乗った人生の在り方に疑問を感じ退職。<br /><br />
+                その後、バンド活動をしながらバーテンダーや植木職人を経て37歳の時にWebエンジニアになることを決意し、フィリピンに英語IT留学をする。<br />
+                帰国後はフリーランスWebエンジニアとして活動する傍ら、地元の会社で1人クリエティブ兼情シスや事業の立ち上げを任されたり、現在は福祉事業の中でプログラミング教材の開発にも携わっています。<br /><br />
+                制作においては、クライアントの想いを形にすること、その先のユーザーに寄り添った提案を心がけています。<br />
+                これからも常に挑戦する気持ちを忘れず、活動していきたいと思います。
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- works -->
+        <section class="works" id="works" aria-labelledby="works-heading">
+          <div class="container">
+            <h2 class="works-ttl section-ttl eng" id="works-heading">Works</h2>
+            <div class="works-archive">
+              <div class="works-archive__item left swiper">
+                <ul class="slider left swiper-wrapper">
+                  <li class="slider-item swiper-slide">
+                    <a href="#" class="slider-link">
+                      <div class="slider-link__thumb">
+                        <img
+                          src="../../public/assets/images/montmake.png"
+                          alt="サムネイル画像"
+                        />
+                      </div>
+                      <div class="slider-link__cat">
+                        <small><span>Wordpress</span></small>
+                      </div>
+                      <h3 class="slider-link__ttl">
+                        株式会社 Mont make様コーポレートサイト
+                      </h3>
+                    </a>
+                  </li>
+                  <li class="slider-item swiper-slide">
+                    <a href="#" class="slider-link">
+                      <div class="slider-link__thumb">
+                        <img
+                          src="../../public/assets/images/montmake.png"
+                          alt="サムネイル画像"
+                        />
+                      </div>
+                      <div class="slider-link__cat">
+                        <small><span>Wordpress</span></small>
+                      </div>
+                      <h3 class="slider-link__ttl">
+                        株式会社 Mont make様コーポレートサイト
+                      </h3>
+                    </a>
+                  </li>
+                  <li class="slider-item swiper-slide">
+                    <a href="#" class="slider-link">
+                      <div class="slider-link__thumb">
+                        <img
+                          src="../../public/assets/images/montmake.png"
+                          alt="サムネイル画像"
+                        />
+                      </div>
+                      <div class="slider-link__cat">
+                        <small><span>Wordpress</span></small>
+                      </div>
+                      <h3 class="slider-link__ttl">
+                        株式会社 Mont make様コーポレートサイト
+                      </h3>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="works-archive__item right swiper">
+                <ul class="slider right swiper-wrapper">
+                  <li class="slider-item swiper-slide">
+                    <a href="#" class="slider-link">
+                      <div class="slider-link__cat">
+                        <small><span>Next.js</span></small>
+                        <small><span>Laravel</span></small>
+                      </div>
+                      <h3 class="slider-link__ttl">
+                        Stacked Stateホームページ
+                      </h3>
+                      <div class="slider-link__thumb">
+                        <img
+                          src="../../public/assets/images/stackedstate.png"
+                          alt="サムネイル画像"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="slider-item swiper-slide">
+                    <a href="#" class="slider-link">
+                      <div class="slider-link__cat">
+                        <small><span>Next.js</span></small>
+                        <small><span>Laravel</span></small>
+                      </div>
+                      <h3 class="slider-link__ttl">
+                        Stacked Stateホームページ
+                      </h3>
+                      <div class="slider-link__thumb">
+                        <img
+                          src="../../public/assets/images/stackedstate.png"
+                          alt="サムネイル画像"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="slider-item swiper-slide">
+                    <a href="#" class="slider-link">
+                      <div class="slider-link__cat">
+                      <small><span>Next.js</span></small>
+                        <small><span>Laravel</span></small>
+                      </div>
+                      <h3 class="slider-link__ttl">
+                        Stacked Stateホームページ
+                      </h3>
+                      <div class="slider-link__thumb">
+                        <img
+                          src="../../public/assets/images/stackedstate.png"
+                          alt="サムネイル画像"
+                        />
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p class="works-caption">
+              上記実績以外にもコーダーとして下請け案件がほとんどのため掲載できない実績が多数ございます
+            </p>
+          </div>
+        </section>
+        <!-- plan -->
+        <section class="plan" id="plan" aria-labelledby="plan-heading">
+         <div class="plan-bg__img"></div>
+          <div class="plan-bg"></div>
+          <div class="container">
+            <h2 class="plan-ttl section-ttl eng" id="plan-heading">plan</h2>
+            <div class="plan-tab">
+              <div class="plan-tab__item left"><p>制作会社向け</p></div>
+              <div class="plan-tab__item right"><p>一般・ライブハウス向け</p></div>
+            </div>
+            <div class="plan-main">
+              <div class="plan-create plan-main__item">
+                <div class="plan-create__item left">
+                  <div class="lancers">
+                    <h3 class="lancers-ttl">Lancersでの評価</h3>
+                    <ul class="lancers-list">
+                      <li class="lancers-list__item">納期厳守</li>
+                      <li class="lancers-list__item">素早い対応と密な連絡</li>
+                      <li class="lancers-list__item">高い品質</li>
+                    </ul>
+                    <p class="lancers-sub">
+                      多数の実績があり、ご評価を頂いております。
+                    </p>
+                    <div class="lancers-profile">
+                      <h3 class="lancers-profile__ttl">Lancersプロフィール</h3>
+                      <img
+                        src="../../public/assets/images/lancers-qr.png"
+                        alt="LancersプロフィールQRコード"
+                      />
+                    </div>
+                  </div>
+                  <div class="languages">
+                    <h3 class="languages-ttl">対応言語</h3>
+                    <ul class="languages-list">
+                      <li class="languages-list__item">HTML</li>
+                      <li class="languages-list__item">CSS</li>
+                      <li class="languages-list__item">
+                        Javascript(JQuery,React,Typescript)
+                      </li>
+                      <li class="languages-list__item">PHP(Laravel)</li>
+                      <li class="languages-list__item">Wordpress</li>
+                      <li class="languages-list__item">Python(Django)</li>
+                      <li class="languages-list__item">GAS</li>
+                    </ul>
+                  </div>
+                  <div class="enviroments">
+                    <h3 class="enviroments-ttl">
+                      サーバー環境・使用ツールなど
+                    </h3>
+                    <ul class="enviroments-list">
+                      <li class="enviroments-list__item">AWS</li>
+                      <li class="enviroments-list__item">VPS</li>
+                      <li class="enviroments-list__item">Linux(Ubuntu)</li>
+                      <li class="enviroments-list__item">nginx</li>
+                      <li class="enviroments-list__item">Git</li>
+                      <li class="enviroments-list__item">Docker</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="plan-create__item right">
+                  <div class="uptime">
+                    <h3 class="uptime-ttl">稼働時間</h3>
+                    <p class="uptime-content">
+                      月曜～金曜：18時～24時<br />
+                      土日：終日
+                    </p>
+                  </div>
+                  <div class="cost">
+                    <h3 class="cost-ttl">概算費用</h3>
+                    <table class="cost-landing">
+                      <thead>
+                        <tr>
+                          <th colspan="2">ランディングページ</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>3～5日</td>
+                          <td>¥50,000～</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="cost-home">
+                      <thead>
+                        <tr>
+                          <th colspan="2">ホームページ</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>1P-5P</th>
+                          <th></th>
+                        </tr>
+                        <tr>
+                          <td>3～5日</td>
+                          <td>¥50,000～</td>
+                        </tr>
+                        <tr>
+                          <th>5P-10P</th>
+                          <th></th>
+                        </tr>
+                        <tr>
+                          <td>5～10日</td>
+                          <td>¥100,000～</td>
+                        </tr>
+                        <tr>
+                          <th>10P-</th>
+                          <th></th>
+                        </tr>
+                        <tr>
+                          <td>10日～</td>
+                          <td>¥150,000～</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="plan-general plan-main__item">
+                <h3 class="plan-general__ttl">サービス料金</h3>
+                <div class="plan-general__list">
+                  <ul class="plan-general__box left">
+                    <li class="plan-general__item">
+                      <h4 class="plan-general__name">
+                        ホームページ制作・リニューアル
+                      </h4>
+                      <p class="plan-general__sub">
+                        シンプルなLPから、しっかりした構成まで対応
+                      </p>
+                      <p class="plan-general__fee">¥50,000～</p>
+                    </li>
+                    <li class="plan-general__item">
+                      <h4 class="plan-general__name">
+                        多言語対応（インバウンド）
+                      </h4>
+                      <p class="plan-general__sub">
+                        日本語＋英語切替・翻訳整備なども可能
+                      </p>
+                      <p class="plan-general__fee">¥20,000～</p>
+                    </li>
+                    <li class="plan-general__item">
+                      <h4 class="plan-general__name">
+                        アクセス解析（Google連携）
+                      </h4>
+                      <p class="plan-general__sub">
+                        Googleアナリティクス／Search Console導入対応
+                      </p>
+                      <p class="plan-general__fee">¥10,000～</p>
+                    </li>
+                  </ul>
+                  <ul class="plan-general__box right">
+                    <li class="plan-general__item">
+                      <h4 class="plan-general__name">
+                        スケジュール更新・運用保守
+                      </h4>
+                      <p class="plan-general__sub">
+                        情報の反映／SNS連携／画像差し替えなど対応可能
+                      </p>
+                      <p class="plan-general__fee">¥5,000～</p>
+                    </li>
+                    <li class="plan-general__item">
+                      <h4 class="plan-general__name">
+                        オンラインメンター・ヘルプデスク
+                      </h4>
+                      <p class="plan-general__sub">
+                        ホームページ制作や運用の技術的なことについて質問にお応えします。
+                      </p>
+                      <p class="plan-general__fee">応相談</p>
+                    </li>
+                    <li class="plan-general__item">
+                      <h4 class="plan-general__name">お問い合わせ</h4>
+                      <p class="plan-general__sub">
+                        ご予算・ご相談内容に応じて柔軟に対応します。<br />
+                        「今のサイト、見てもらえますか？」だけでもOKです！
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="plan-cta cta">
+              <p class="cta-p">無料で相談してみる</p>
+              <a
+                href="https://x.com/dj_cherrrrryboy"
+                target="_blank"
+                class="cta-link"
+                >詳しくはこちら</a
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer" id="footer" role="contentinfo">
+      <img class="footer-logo" src="../../public/assets/images/logo.svg" alt="ロゴ画像" />
+      <ul class="footer-social" aria-label="フッターSNSリンク">
+        <li class="footer-social__item facebook">
+          <a href="#" target="_blank" class="footer-social__link">
+            <img src="../../public/assets/images/facebook.svg" alt="facebook" />
+          </a>
+        </li>
+        <li class="footer-social__item instagram">
+          <a href="#" target="_blank" class="footer-social__link">
+            <img src="../../public/assets/images/instagram.svg" alt="instagram" />
+          </a>
+        </li>
+        <li class="footer-social__item twitter">
+          <a href="#" target="_blank" class="footer-social__link">
+            <img src="../../public/assets/images/x.svg" alt="x" />
+          </a>
+        </li>
+      </ul>
+      <small class="footer-copyright"> &copy;dynamis</small>
+    </footer>
+    <script src="../assets/javascript/main.js"></script>
+  </body>
+</html>

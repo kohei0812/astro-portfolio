@@ -1,0 +1,136 @@
+@use "../variables" as v;
+/*****************/
+/*** work***/
+/*****************/
+@media screen and (min-width: 769px) {
+    #top {
+        .works {
+            background-color: v.$color-primary;
+            padding-top: 76px;
+            padding-bottom: 63px;
+
+            .container {
+                position: relative;
+            }
+
+            &-ttl {
+                left: 0;
+                top: 0;
+            }
+
+            &-archive {
+                margin: 84px auto 0;
+                width: 1000px;
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                transform: skew(-22.5deg);
+
+                &__item {
+                    width: 50%;
+                    height: 420px;
+                    transform: scale(1.15);
+
+                    .slider {
+                        &-link {
+                            &__thumb {
+                                transform: skew(22.5deg);
+
+                                img {
+                                    width: 100%;
+                                }
+                            }
+
+                            &__cat {
+                                small {
+                                    padding: 8px 10px;
+                                    background-color: v.$color-accent;
+                                    position: relative;
+                                    font-size: 1.4rem;
+                                    margin-left: 25px;
+
+                                    &:before {
+                                        content: "×";
+                                        color: v.$color-accent;
+                                        position: absolute;
+                                        left: -15px;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        font-weight: bold;
+                                        font-size: 1.4rem;
+                                    }
+
+                                    span {
+                                        transform: skew(22.5deg);
+                                        color: white;
+                                        text-align: center;
+                                        font-weight: bold;
+                                    }
+
+                                }
+
+                                small:first-child {
+                                    margin-left: 0;
+
+                                    &::before {
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                            &__ttl {
+                                transform: skew(22.5deg);
+                                font-size: 1.8rem;
+                                color: white;
+                                font-weight: bold;
+                            }
+                        }
+
+                        &.left {
+                            .slider-link__cat {
+                                margin-top: 20px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                                margin-right: 8%;
+                            }
+
+                            .slider-link__ttl {
+                                margin-top: 20px;
+                                text-align: end;
+                                margin-right: 8%;
+                            }
+                        }
+
+                        &.right {
+                            .slider-item {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-end;
+                            }
+
+                            .slider-link__cat {
+                                margin-bottom: 20px;
+                                display: flex;
+                                align-items: center;
+                                margin-left: 8%;
+                            }
+
+                            .slider-link__ttl {
+                                margin-bottom: 20px;
+                                margin-left: 8%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-caption {
+                margin-top: 100px;
+                font-size: 1.6rem;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+    }
+}

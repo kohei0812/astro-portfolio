@@ -1,0 +1,42 @@
+@use "../variables" as v;
+/*****************/
+/*** hero***/
+/*****************/
+@media screen and (min-width: 769px) {
+  #top {
+    .hero {
+      position: relative;
+      height: 100vh;
+      background-image: url(/assets/images/hero.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      &-ttl {
+        font-size: 6.4rem;
+        line-height: 1.6;
+        color: white;
+        font-weight: bold;
+      }
+
+      &-sub-title {
+        position: absolute;
+        bottom: 45px;
+        left: 20px;
+        font-size: 4rem;
+        color: rgba(195, 206, 224, .3);
+        font-weight: bold;
+
+        span {
+          font-size: 3.2rem;
+        }
+      }
+    }
+  }
+}

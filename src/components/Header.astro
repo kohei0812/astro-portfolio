@@ -1,0 +1,80 @@
+---
+ //src/components/Header.astro
+---
+ <!-- fixed -->
+    <!-- loader -->
+    <div class="loader-wrapper" role="presentation">
+      <div class="loader" aria-hidden="true"></div>
+    </div>
+    <!-- sp-nav -->
+    <nav class="sp-nav" aria-label="スマートフォン用ナビゲーション">
+      <ul class="menu">
+        <li class="menu__item">
+          <a href="#" class="menu__link">プロフィール</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">制作実績</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">料金プラン</a>
+        </li>
+      </ul>
+      <ul class="sp-sns" aria-label="SNSリンク">
+        <li class="sp-sns__item">
+          <a
+            href="#"
+            target="_blank"
+            class="sp-sns__link"
+            aria-label="facebook"
+          >
+            <img src="/assets/images/facebook.svg" alt="facebook" />
+          </a>
+        </li>
+        <li class="sp-sns__item">
+          <a
+            href="#"
+            target="_blank"
+            class="sp-sns__link"
+            aria-label="instagram"
+          >
+            <img src="/assets/images/instagram.svg" alt="instagram" />
+          </a>
+        </li>
+        <li class="sp-sns__item">
+          <a href="#" target="_blank" class="sp-sns__link" aria-label="x">
+            <img src="/assets/images/x.svg" alt="x" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- humburger -->
+    <button
+      class="hamburger-menu"
+      id="js-hamburger-menu"
+      aria-label="メニューを開く"
+    >
+      <span class="hamburger-menu__bar"></span>
+      <span class="hamburger-menu__bar"></span>
+      <span class="hamburger-menu__bar"></span>
+    </button>
+    <!-- header -->
+    <header class="header" id="header" role="banner">
+      <div class="container">
+        <a href="#" class="header-logo" aria-label="トップページへ">
+          <img src="/assets/images/logo.svg" alt="ロゴ画像" />
+        </a>
+        <nav class="header-nav" aria-label="メインナビゲーション">
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="#" class="menu__link">プロフィール</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">制作実績</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">料金プラン</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
