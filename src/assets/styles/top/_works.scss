@@ -134,3 +134,140 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    #top {
+        .works {
+            background-color: v.$color-primary;
+            padding-top: 25px;
+            padding-bottom: 23px;
+
+            .container {
+                position: relative;
+            }
+
+            &-ttl {
+                left: 0;
+                top: 60px;
+            }
+
+            &-archive {
+                margin: 0 auto;
+                width: 90%;
+
+                &__item {
+                    transform: skew(-22.5deg);
+
+                    .slider {
+                        &-link {
+                            display: flex;
+                            flex-direction: column;
+
+                            &__thumb {
+                                transform: skew(22.5deg);
+
+                                img {
+                                    width: 100%;
+                                }
+                            }
+
+                            &__cat {
+                                small {
+                                    padding: 5px 10px;
+                                    background-color: v.$color-accent;
+                                    position: relative;
+                                    font-size: 1.4rem;
+                                    margin-left: 25px;
+
+                                    &:before {
+                                        content: "×";
+                                        color: v.$color-accent;
+                                        position: absolute;
+                                        left: -15px;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        font-weight: bold;
+                                        font-size: 1.4rem;
+                                    }
+
+                                    span {
+                                        transform: skew(22.5deg);
+                                        color: white;
+                                        text-align: center;
+                                        font-weight: bold;
+                                    }
+
+                                }
+
+                                small:first-child {
+                                    margin-left: 0;
+
+                                    &::before {
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                            &__ttl {
+                                transform: skew(22.5deg);
+                                font-size: 1.8rem;
+                                color: white;
+                                font-weight: bold;
+                            }
+                        }
+
+                        &.left {
+
+                            .slider-link__cat {
+                                margin-top: 20px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                                margin-right: 15%;
+                            }
+
+                            .slider-link__ttl {
+                                line-height: 1.6;
+                                margin-top: 18px;
+                                text-align: end;
+                                margin-right: 15%;
+                            }
+
+                            .slider-link__thumb {
+                                margin-top: 18px;
+                            }
+                        }
+
+                        &.right {
+margin-top:30px;
+                            .slider-item {
+                                display: flex;
+                                flex-direction: column;
+                            }
+
+                            .slider-link__cat {
+                                margin-bottom: 20px;
+                                display: flex;
+                                align-items: center;
+                                margin-left: 8%;
+                            }
+
+                            .slider-link__ttl {
+                                line-height: 1.6;
+                                margin-bottom: 20px;
+                                margin-left: 8%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-caption {
+                margin-top:25px;
+                font-size: 1.4rem;
+                font-weight: bold;
+                line-height: 1.6;
+            }
+        }
+    }
+}

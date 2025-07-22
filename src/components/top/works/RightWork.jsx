@@ -1,38 +1,58 @@
 import { useEffect, useState, useRef } from 'react';
 import Swiper from 'swiper';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 export default function LeftWork() {
     const [posts, setPosts] = useState([]);
     const sliderRef = useRef(null);
-
+    const swiperInstance = useRef(null);
     useEffect(() => {
         fetch('https://kouhei-test.com/dynamis/wp-json/wp/v2/music?_embed')
             .then(res => res.json())
             .then(data => setPosts(data))
             .catch(err => console.error(err));
     }, []);
-    useEffect(() => {
-        if (posts.length > 0 && sliderRef.current) {
-            new Swiper(sliderRef.current, {
-                direction: 'vertical',
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                    reverseDirection: true,
-                },
-            });
-        }
-    }, [posts]);
+
+   // Swiper初期化処理（direction変更対応）
+  const initSwiper = () => {
+    if (!sliderRef.current) return;
+
+    const isMobile = window.innerWidth <= 768;
+    // 既存インスタンス破棄
+    if (swiperInstance.current) {
+      swiperInstance.current.destroy(true, true);
+    }
+
+    // 新規インスタンス作成
+    swiperInstance.current = new Swiper(sliderRef.current, {
+      direction: isMobile ? 'horizontal' : 'vertical',
+      loop: true,
+      modules: [Autoplay],
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        reverseDirection: !isMobile,
+      },
+    });
+  };
+
+  // 初回・リサイズ時に Swiper 再構築
+  useEffect(() => {
+    if (posts.length > 0) {
+      initSwiper();
+      window.addEventListener('resize', initSwiper);
+      return () => window.removeEventListener('resize', initSwiper);
+    }
+  }, [posts]);
     return (
         <div className="works-archive__item right swiper" ref={sliderRef}>
-            <ul className="slider right swiper-wrapper">
+            <div className="slider right swiper-wrapper">
                 {posts.map(post => {
                     const thumbnail =
                         post._embedded?.['wp:featuredmedia']?.[0]?.source_url || '/default.jpg'; // fallback if missing
                     return (
-                        <li className="slider-item swiper-slide">
+                        <div key={post.id} className="slider-item swiper-slide">
                             <a href="#" className="slider-link">
                                 {post._embedded?.['wp:term']?.[0]?.length > 0 && (
                                     <div className="slider-link__cat">
@@ -49,10 +69,10 @@ export default function LeftWork() {
                                     <img src={thumbnail} alt="サムネイル画像" />
                                 </div>
                             </a>
-                        </li>
+                        </div>
                     );
                 })}
-            </ul>
+            </div>
         </div>
     );
 }
