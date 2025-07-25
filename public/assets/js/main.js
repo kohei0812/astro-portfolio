@@ -44,16 +44,6 @@ jQuery(function ($) {
     });
   });
   /******************* */
-  /* top 紙芝居 */
-  /******************* */
-  $(function () {
-    console.log(typeof $.fn.stickyStack);
-    $(".stickyStack-parent").stickyStack({
-      containerElement: ".stickyStack-parent",
-      stackingElement: ".stickyStack-child",
-    });
-  });
-  /******************* */
   /* header mix-blend */
   /******************* */
   $(function () {

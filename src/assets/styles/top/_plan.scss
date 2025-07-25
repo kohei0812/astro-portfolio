@@ -412,6 +412,15 @@
       &-main {
         margin-top: 36px;
         background-color: white;
+         &__item{
+          display: none;
+          &.active.plan-create{
+            display: flex;
+          }
+          &.active.plan-general{
+            display:block;
+          }
+        }
       }
 
       h3 {

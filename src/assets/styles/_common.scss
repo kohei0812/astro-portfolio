@@ -253,6 +253,7 @@ img {
     background-color: black;
     padding-top: 35px;
     padding-bottom: 28px;
+    position: relative;
 
     &-logo {
       margin: 30px auto 0;
@@ -438,6 +439,7 @@ img {
     top: 15px;
     right: 5px;
     z-index: 102;
+
     &.active {
       mix-blend-mode: exclusion;
     }
@@ -521,6 +523,7 @@ img {
     background-color: black;
     padding-top: 35px;
     padding-bottom: 44px;
+    position: relative;
 
     &-logo {
       margin: 0 auto;
