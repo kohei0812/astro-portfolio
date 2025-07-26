@@ -152,7 +152,9 @@
         }
 
         &-item {
+            padding-bottom:30px;
             margin-bottom: 30px;
+            border-bottom: 1px solid white;
 
             &__thumb {
                 .visually-hidden {
@@ -173,7 +175,7 @@
 
                 small {
                     font-size: 1.4rem;
-                    margin-right: 15px;
+                    margin-right: 22px;
                     display: flex;
                     align-items: center;
                     color: white;

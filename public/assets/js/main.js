@@ -22,7 +22,10 @@ jQuery(function ($) {
       $("body,html").animate({ scrollTop: position }, speed, "swing");
     }
   });
-
+$(".sp-nav .menu__item").on("click", function () {
+    $(".sp-nav").toggleClass("active");
+    $(".hamburger-menu").toggleClass("hamburger-menu--open");
+  });
   /******************* */
   /*  ページ内スクロール  */
   /******************* */

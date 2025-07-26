@@ -414,7 +414,8 @@ img {
 
     &-link {
       margin: 35px auto 0;
-      width: 330px;
+      width: 90%;
+      max-width: 330px;
       height: 62px;
       border-radius: 7px;
       color: white;
@@ -445,7 +446,7 @@ img {
   /*****************/
   .pageheader {
     position: relative;
-    padding: 100px 0 120px;
+    padding: 100px 0 100px;
     text-align: center;
     background-image: url(/assets/images/challenges-bg__img.png);
     background-position: top;
@@ -477,15 +478,16 @@ img {
 
     &-list {
       display: flex;
+      flex-wrap: wrap;
       list-style: none;
       padding: 0;
 
       &__item {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         margin-right: 15px;
+        margin-bottom:10px;
         display: flex;
         align-items: center;
-
         &:before {
           content: ">";
           margin-right: 15px;
@@ -518,7 +520,7 @@ img {
     max-width: 400px;
     width: 100%;
     height: 100vh;
-    background-color: rgba(15, 24, 38, .7);
+    background-color: rgba(15, 24, 38, .9);
     padding: 50px 15px;
     display: flex;
     flex-direction: column;

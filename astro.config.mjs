@@ -5,6 +5,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://yourdomain.com',  // ← 必須。実際のドメインにすること！
+  site: 'https://dddynamis.com',  // ← 必須。実際のドメインにすること！
   integrations: [react(), sitemap()],
 });

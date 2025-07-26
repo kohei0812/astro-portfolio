@@ -379,7 +379,8 @@
       &-tab {
         transform: skew(-22.5deg);
         margin: 0 auto;
-        width: 376px;
+        width: 100%;
+        max-width: 376px;
         height: 33px;
 
         display: flex;
@@ -415,7 +416,7 @@
          &__item{
           display: none;
           &.active.plan-create{
-            display: flex;
+            display: block;
           }
           &.active.plan-general{
             display:block;
@@ -514,8 +515,7 @@
               }
             }
 
-            li:first-child,
-            li:nth-child(4) {
+            li:first-child {
               &:before {
                 display: none;
               }
