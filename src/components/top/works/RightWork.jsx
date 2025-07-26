@@ -53,7 +53,7 @@ export default function LeftWork() {
                         post._embedded?.['wp:featuredmedia']?.[0]?.source_url || '/default.jpg'; // fallback if missing
                     return (
                         <div key={post.id} className="slider-item swiper-slide">
-                            <a href="#" className="slider-link">
+                            <a href={`/music/${post.slug}/`} className="slider-link">
                                 {post._embedded?.['wp:term']?.[0]?.length > 0 && (
                                     <div className="slider-link__cat">
                                         {post._embedded['wp:term'][0].map((cat) => (

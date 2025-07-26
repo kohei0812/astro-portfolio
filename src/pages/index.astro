@@ -10,6 +10,17 @@ import Plan from "../components/top/Plan.astro";
 <Layout
   title="Dynamis | フロントエンドエンジニア川端康平のポートフォリオサイトです。"
 >
+  <!-- 構造化データ（JSON-LD） -->
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Dynamis",
+      url: "https://dddynamis.com/",
+    })}
+  />
   <!-- main -->
   <main id="top" role="main">
     <Hero />

@@ -186,6 +186,74 @@ img {
   }
 
   /*****************/
+  /*** pageheader***/
+  /*****************/
+  .pageheader {
+    position: relative;
+    padding: 100px 0 120px;
+    text-align: center;
+    background-image: url(/assets/images/challenges-bg__img.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &-ttl {
+      font-size: 2rem;
+      background-color: v.$color-secondary;
+      padding: 20px 50px;
+      display: inline-block;
+      font-weight: bold;
+
+      .eng {
+        display: block;
+        margin-bottom: 15px;
+        font-size: 3.5rem;
+      }
+    }
+  }
+
+  /*****************/
+  /*** breadcrumb***/
+  /*****************/
+  .breadcrumb {
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+
+    &-list {
+      display: flex;
+      list-style: none;
+      padding: 0;
+
+      &__item {
+        font-size: 1.4rem;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+
+        &:before {
+          content: ">";
+          margin-right: 15px;
+          display: inline-block;
+        }
+
+        a {
+          color: white;
+          text-decoration: underline;
+        }
+
+        &:first-child {
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+    }
+  }
+
+  /*****************/
   /*** fixed***/
   /*****************/
   .sp-nav {
@@ -370,6 +438,73 @@ img {
       }
     }
 
+  }
+
+  /*****************/
+  /*** pageheader***/
+  /*****************/
+  .pageheader {
+    position: relative;
+    padding: 100px 0 120px;
+    text-align: center;
+    background-image: url(/assets/images/challenges-bg__img.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &-ttl {
+      font-size: 1.6rem;
+      background-color: v.$color-secondary;
+      padding: 20px 50px;
+      display: inline-block;
+      font-weight: bold;
+
+      .eng {
+        display: block;
+        margin-bottom: 15px;
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  /*****************/
+  /*** breadcrumb***/
+  /*****************/
+  .breadcrumb {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+
+    &-list {
+      display: flex;
+      list-style: none;
+      padding: 0;
+
+      &__item {
+        font-size: 1.4rem;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+
+        &:before {
+          content: ">";
+          margin-right: 15px;
+          display: inline-block;
+        }
+
+        a {
+          color: white;
+          text-decoration: underline;
+        }
+
+        &:first-child {
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+    }
   }
 
   /*****************/

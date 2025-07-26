@@ -55,7 +55,7 @@ export default function LeftWork() {
 
           return (
             <div key={post.id} className="slider-item swiper-slide">
-              <a href="#" className="slider-link">
+              <a href={`/posts/${post.slug}/`} className="slider-link">
                  {post._embedded?.['wp:term']?.[0]?.length > 0 && (
                   <div className="slider-link__cat sp_only">
                     {post._embedded['wp:term'][0].map((cat) => (

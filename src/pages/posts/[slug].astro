@@ -1,0 +1,88 @@
+---
+// src/pages/posts/[slug].astro
+// @ts-nocheck
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const res = await fetch(
+    "https://kouhei-test.com/dynamis/wp-json/wp/v2/posts?_embed"
+  );
+  const posts = await res.json();
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post }, // 🔸 ここで渡しておくと再取得不要
+  }));
+}
+
+const { post } = Astro.props; // 🔸 propsから直接取得
+const categories = post._embedded?.["wp:term"]?.[0] ?? [];
+---
+
+<Layout title={post.title.rendered}>
+  <main id="single">
+    <div class="pageheader">
+      <p class="pageheader-ttl">
+        <span class="eng">Works</span>
+        制作実績
+      </p>
+    </div>
+    <nav aria-label="パンくずリスト" class="breadcrumb">
+      <div class="container">
+        <ol
+          itemscope
+          itemtype="https://schema.org/BreadcrumbList"
+          class="breadcrumb-list"
+        >
+          <li
+            class="breadcrumb-list__item"
+            itemprop="itemListElement"
+            itemscope
+            itemtype="https://schema.org/ListItem"
+          >
+            <a itemprop="item" href="/">
+              <span itemprop="name">ホーム</span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li
+            class="breadcrumb-list__item"
+            itemprop="itemListElement"
+            itemscope
+            itemtype="https://schema.org/ListItem"
+          >
+            <a itemprop="item" href="/work-archive">
+              <span itemprop="name">制作実績</span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li
+            class="breadcrumb-list__item"
+            itemprop="itemListElement"
+            itemscope
+            itemtype="https://schema.org/ListItem"
+          >
+            <span itemprop="name">{post.title.rendered}</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </div>
+    </nav>
+    <article id="post" class="post">
+      <div class="container">
+        <h1>{post.title.rendered}</h1>
+        {
+          categories.length > 0 && (
+            <ul class="category">
+              {categories.map((cat) => (
+                <li class="category-item">{cat.name}</li>
+              ))}
+            </ul>
+          )
+        }
+        <div class="content" set:html={post.content.rendered} />
+        <a href="/work-archive" class="to-archive">一覧に戻る</a>
+      </div>
+    </article>
+  </main>
+</Layout>
