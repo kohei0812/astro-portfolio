@@ -110,6 +110,11 @@
                     line-height: 1.6;
                 }
 
+                h4 {
+                    color: v.$color-secondary;
+                    font-size: 1.7rem;
+                }
+
                 p {
                     font-size: 1.6rem;
                     line-height: 1.6;
@@ -143,7 +148,7 @@
                 height: 60px;
                 margin: 50px auto 0;
                 line-height: 60px;
-                 background-color: #ffd814;
+                background-color: #ffd814;
                 color: v.$color-primary;
                 text-align: center;
                 font-size: 2rem;
@@ -162,14 +167,15 @@
             color: #333;
             padding-bottom: 50px;
             display: flex;
+
             .container {
                 background-color: white;
                 padding-top: 20px;
                 padding-bottom: 20px;
-                padding-left:0;
-                padding-right:0;
-                margin-left:15px;
-                margin-right:15px;
+                padding-left: 0;
+                padding-right: 0;
+                margin-left: 15px;
+                margin-right: 15px;
                 width: 100%;
             }
 
@@ -225,8 +231,9 @@
                 }
 
                 figure {
-                    margin:0 auto;
-width: 90%;
+                    margin: 0 auto;
+                    width: 90%;
+
                     img {
                         width: 100%;
                         margin: 0 auto;
@@ -243,8 +250,8 @@ width: 90%;
                     border-radius: 4px;
                     color: #fff;
                     font-size: 1.8rem;
-                    margin-left:auto;
-                    margin-right:auto;
+                    margin-left: auto;
+                    margin-right: auto;
                     line-height: 1.6;
 
                     &:after {
@@ -267,6 +274,11 @@ width: 90%;
                     background-color: #f4f4f4;
                     font-size: 1.6rem;
                     line-height: 1.6;
+                }
+
+                h4 {
+                    color: v.$color-secondary;
+                    font-size: 1.5rem;
                 }
 
                 p {
