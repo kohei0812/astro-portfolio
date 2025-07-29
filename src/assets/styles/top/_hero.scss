@@ -39,6 +39,10 @@
         white-space: nowrap;
         display: flex;
 
+        &.none {
+          display: none;
+        }
+
         h1,
         p {
           margin-right: 20px;
@@ -91,6 +95,10 @@
         color: rgba(195, 206, 224, .3);
         font-weight: bold;
         white-space: nowrap;
+
+        &.none {
+          display: none;
+        }
 
         h1,
         p {

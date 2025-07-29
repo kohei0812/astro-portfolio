@@ -22,7 +22,7 @@ jQuery(function ($) {
       $("body,html").animate({ scrollTop: position }, speed, "swing");
     }
   });
-$(".sp-nav .menu__item").on("click", function () {
+  $(".sp-nav .menu__item").on("click", function () {
     $(".sp-nav").toggleClass("active");
     $(".hamburger-menu").toggleClass("hamburger-menu--open");
   });
@@ -68,9 +68,11 @@ $(".sp-nav .menu__item").on("click", function () {
         if ($(this).scrollTop() > fvHeight) {
           $(".header").addClass("active");
           $(".hamburger-menu").addClass("active");
+          $(".hero-sub-title").addClass("none");
         } else {
           $(".header").removeClass("active");
           $(".hamburger-menu").removeClass("active");
+          $(".hero-sub-title").removeClass("none");
         }
       });
     }
