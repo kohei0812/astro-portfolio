@@ -81,6 +81,8 @@ $(".sp-nav .menu__item").on("click", function () {
   $(function () {
     $(".plan-tab__item").each(function (index) {
       $(this).on("click", function () {
+        $(".plan-tab__item").removeClass("active");
+        $(this).addClass("active");
         $(".plan-main__item").removeClass("active");
         $(".plan-main__item").eq(index).addClass("active");
       });

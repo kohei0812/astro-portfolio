@@ -56,24 +56,18 @@
         &__item {
           width: 50%;
           cursor: pointer;
-
+  background-color: white;
+            color: v.$color-accent;
+            &.active{
+  background-color: v.$color-accent;
+            color: white;
+            }
           p {
             transform: skew(22.5deg);
             font-size: 1.5rem;
             font-weight: bold;
             line-height: 48px;
             text-align: center;
-          }
-
-          &.left {
-            background-color: v.$color-accent;
-            color: white;
-          }
-
-          &.right {
-            background-color: white;
-            color: v.$color-accent;
-
           }
         }
       }
@@ -388,24 +382,18 @@
         &__item {
           width: 50%;
           cursor: pointer;
-
+ background-color: white;
+            color: v.$color-accent;
+            &.active{
+  background-color: v.$color-accent;
+            color: white;
+            }
           p {
             transform: skew(22.5deg);
             font-size: 1.2rem;
             font-weight: bold;
             line-height: 33px;
             text-align: center;
-          }
-
-          &.left {
-            background-color: v.$color-accent;
-            color: white;
-          }
-
-          &.right {
-            background-color: white;
-            color: v.$color-accent;
-
           }
         }
       }

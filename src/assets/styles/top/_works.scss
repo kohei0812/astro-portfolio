@@ -129,11 +129,12 @@
                 height: 60px;
                 margin: 100px auto 0;
                 line-height: 60px;
-                background-color: white;
+                background-color: #ffd814;
+                color: v.$color-primary;
                 text-align: center;
                 font-size:2rem;
                 font-weight:bold;
-                color:v.$color-primary;
+                border-radius:5px ;
             }
             &-caption {
                 margin-top: 50px;
@@ -276,11 +277,12 @@ margin-top:30px;
                 height: 50px;
                 margin: 50px auto 0;
                 line-height: 50px;
-                background-color: white;
+               background-color: #ffd814;
+                color: v.$color-primary;
                 text-align: center;
                 font-size:1.6rem;
                 font-weight:bold;
-                color:v.$color-primary;
+                border-radius:5px ;
             }
             &-caption {
                 margin-top:25px;
