@@ -33,23 +33,38 @@
       &-sub-title {
         position: absolute;
         bottom: 45px;
-        left: -20px;
+        left: 0;
         color: rgba(195, 206, 224, .3);
         font-weight: bold;
         white-space: nowrap;
-        display: flex;
+        width: 100vw;
+        overflow: hidden;
 
         &.none {
           display: none;
         }
 
-        h1,
-        p {
+        .hero-text-swiper {
+          width: 100%;
+          height: auto;
+        }
+
+        .swiper-wrapper {
+          transition-timing-function: linear;
+        }
+
+        .swiper-slide {
+          width: auto;
           margin-right: 20px;
+        }
+
+        .scroll-content {
           font-size: 4rem;
+          white-space: nowrap;
         }
 
         span {
+          display: block;
           font-size: 3.2rem;
         }
       }
@@ -91,22 +106,37 @@
         position: absolute;
         bottom: 50px;
         left: 20px;
-        display: flex;
         color: rgba(195, 206, 224, .3);
         font-weight: bold;
         white-space: nowrap;
+        width: calc(100vw - 40px);
+        overflow: hidden;
 
         &.none {
           display: none;
         }
 
-        h1,
-        p {
+        .hero-text-swiper {
+          width: 100%;
+          height: auto;
+        }
+
+        .swiper-wrapper {
+          transition-timing-function: linear;
+        }
+
+        .swiper-slide {
+          width: auto;
           margin-right: 20px;
+        }
+
+        .scroll-content {
           font-size: 2.4rem;
+          white-space: nowrap;
         }
 
         span {
+          display: block;
           font-size: 1.6rem;
         }
       }

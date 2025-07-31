@@ -91,19 +91,3 @@ jQuery(function ($) {
     });
   });
 });
-/******************* */
-/* top 文字スクロール */
-/******************* */
-
-const track = document.querySelector(".hero-sub-title");
-const itemWidth = track.offsetWidth / 2; // 2つ並んでいるので半分でOK
-
-gsap.to(track, {
-  x: -itemWidth,
-  duration: 15,
-  ease: "linear",
-  repeat: -1,
-  modifiers: {
-    x: gsap.utils.unitize((x) => parseFloat(x) % itemWidth), // シームレスループ
-  },
-});
