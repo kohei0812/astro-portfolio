@@ -15,11 +15,23 @@ jQuery(function ($) {
     $("body,html").stop().scrollTop(0);
     var hash = window.location.hash;
     if (hash !== void 0 && hash !== "") {
-      var speed = 800; // ミリ秒
-      var href = $(this).attr("href");
-      var target = $(hash);
-      var position = target.offset().top - 80; // ヘッダーの高さ70pxをずらす
-      $("body,html").animate({ scrollTop: position }, speed, "swing");
+      // 動的コンテンツの読み込み完了を待つ
+      function scrollToHash() {
+        var target = $(hash);
+        if (target.length > 0) {
+          var speed = 800; // ミリ秒
+          var position = target.offset().top - 80; // ヘッダーの高さ70pxをずらす
+          $("body,html").animate({ scrollTop: position }, speed, "swing");
+        } else {
+          // 要素が見つからない場合は少し待ってリトライ
+          setTimeout(scrollToHash, 100);
+        }
+      }
+      
+      // DOM読み込み完了後に実行
+      $(window).on('load', function() {
+        setTimeout(scrollToHash, 200); // 追加の待機時間
+      });
     }
   });
   /******************* */
@@ -35,10 +47,21 @@ jQuery(function ($) {
       var href = $(this).attr("href");
       // 移動先を取得
       var target = $(href == "#" || href == "" ? "html" : href);
-      // 移動先を数値で取得
-      var position = target.offset().top;
-      // スムーススクロール
-      $("body,html").animate({ scrollTop: position }, speed, "swing");
+      
+      // 動的コンテンツの読み込み完了を待つ
+      function scrollToTarget() {
+        if (target.length > 0) {
+          // 移動先を数値で取得（ヘッダーの高さを考慮）
+          var position = target.offset().top - 80;
+          // スムーススクロール
+          $("body,html").animate({ scrollTop: position }, speed, "swing");
+        } else {
+          // 要素が見つからない場合は少し待ってリトライ
+          setTimeout(scrollToTarget, 50);
+        }
+      }
+      
+      scrollToTarget();
       $(".sp-nav").removeClass("active");
       $(".hamburger-menu").removeClass("hamburger-menu--open");
       return false;
