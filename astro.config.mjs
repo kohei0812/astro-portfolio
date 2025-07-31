@@ -7,7 +7,13 @@ import node from "@astrojs/node";
 // https://astro.build/config
 export default defineConfig({
   output: "server", // SSRを有効に
-  adapter: node({ mode: "standalone" }),  // Node.jsで実行する場合は adapter 不要
-  site: "https://dddynamis.com", // ← 必須。実際のドメインにすること！
+  adapter: node({ mode: "standalone" }),
+  site: "https://dddynamis.com",
   integrations: [react(), sitemap()],
+  compressHTML: false,
+  vite: {
+    build: {
+      minify: false,
+    }
+  }
 });

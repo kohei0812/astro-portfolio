@@ -154,6 +154,13 @@
                 font-size: 2rem;
                 font-weight: bold;
                 border-radius: 5px;
+
+                &:hover {
+                    opacity: 1;
+                    background-color: v.$color-primary;
+                    color: #ffd814;
+                    border: 1px solid #ffd814;
+                }
             }
         }
     }
@@ -320,6 +327,13 @@
                 font-size: 1.6rem;
                 font-weight: bold;
                 border-radius: 5px;
+
+                &:hover {
+                    opacity: 1;
+                    background-color: v.$color-primary;
+                    color: #ffd814;
+                    border: 1px solid #ffd814;
+                }
             }
         }
     }

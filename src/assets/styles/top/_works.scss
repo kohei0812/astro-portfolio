@@ -124,18 +124,27 @@
                     }
                 }
             }
-            &-link{
-                 width: 300px;
+
+            &-link {
+                width: 300px;
                 height: 60px;
                 margin: 100px auto 0;
                 line-height: 60px;
                 background-color: #ffd814;
                 color: v.$color-primary;
                 text-align: center;
-                font-size:2rem;
-                font-weight:bold;
-                border-radius:5px ;
+                font-size: 2rem;
+                font-weight: bold;
+                border-radius: 5px;
+
+                &:hover {
+                    opacity: 1;
+                    background-color: v.$color-primary;
+                    color: #ffd814;
+                    border: 1px solid #ffd814;
+                }
             }
+
             &-caption {
                 margin-top: 50px;
                 font-size: 1.6rem;
@@ -164,12 +173,15 @@
 
             &-archive {
                 margin: 0 auto;
-                width: 90%;
 
                 &__item {
+                    margin: 0 auto;
                     transform: skew(-22.5deg);
+                    margin-right: 7%;
+                    margin-left: 7%;
 
                     .slider {
+
                         &-link {
                             display: flex;
                             flex-direction: column;
@@ -224,6 +236,12 @@
                                 font-size: 1.8rem;
                                 color: white;
                                 font-weight: bold;
+                                white-space: nowrap;
+                                /* 改行させない */
+                                overflow: hidden;
+                                /* はみ出た部分を隠す */
+                                text-overflow: ellipsis;
+                                /* 「…」で省略表示 */
                             }
                         }
 
@@ -250,7 +268,8 @@
                         }
 
                         &.right {
-margin-top:30px;
+                            margin-top: 30px;
+
                             .slider-item {
                                 display: flex;
                                 flex-direction: column;
@@ -272,20 +291,29 @@ margin-top:30px;
                     }
                 }
             }
- &-link{
-                 width: 250px;
+
+            &-link {
+                width: 250px;
                 height: 50px;
                 margin: 50px auto 0;
                 line-height: 50px;
-               background-color: #ffd814;
+                background-color: #ffd814;
                 color: v.$color-primary;
                 text-align: center;
-                font-size:1.6rem;
-                font-weight:bold;
-                border-radius:5px ;
+                font-size: 1.6rem;
+                font-weight: bold;
+                border-radius: 5px;
+
+                &:hover {
+                    opacity: 1;
+                    background-color: v.$color-primary;
+                    color: #ffd814;
+                    border: 1px solid #ffd814;
+                }
             }
+
             &-caption {
-                margin-top:25px;
+                margin-top: 25px;
                 font-size: 1.4rem;
                 font-weight: bold;
                 line-height: 1.6;

@@ -98,6 +98,9 @@
                         line-height: 48px;
                         text-align: center;
                         transform: skew(20deg);
+                        br{
+                            display: none;
+                        }
                     }
                 }
             }
@@ -189,8 +192,8 @@
             .container {
                 position: relative;
                 margin-top: 34px;
-                padding-left: 20px;
-                padding-right: 20px;
+                padding-left: 15px;
+                padding-right: 15px;
             }
 
             &-sub {
@@ -206,6 +209,8 @@
                 &__item {
                     background-color: white;
                     transform: skew(-20deg);
+                    margin-right:3.5%;
+                    margin-left:3.5%;
                     margin-bottom: 33px;
                     padding: 10px 25px;
 
