@@ -1,5 +1,12 @@
 ---
 //src/components/Header.astro
+const currentPath = Astro.url.pathname;
+const isTopPage = currentPath === "/";
+
+// トップページでは#リンク、他ページでは/付きリンクを使用
+const profileLink = isTopPage ? "#profile" : "/#profile";
+const planLink = isTopPage ? "#plan" : "/#plan";
+const contactLink = isTopPage ? "#contact" : "/#contact";
 ---
 
 <!-- fixed --><!-- loader -->
@@ -13,13 +20,16 @@
       <a href="/" class="menu__link">トップ</a>
     </li>
     <li class="menu__item">
-      <a href="/#profile" class="menu__link">プロフィール</a>
+      <a href={profileLink} class="menu__link">プロフィール</a>
     </li>
     <li class="menu__item">
       <a href="/work-archive" class="menu__link">制作実績</a>
     </li>
     <li class="menu__item">
-      <a href="/#plan" class="menu__link">料金プラン</a>
+      <a href={planLink} class="menu__link">料金プラン</a>
+    </li>
+    <li class="menu__item">
+      <a href={contactLink} class="menu__link">お問い合わせ</a>
     </li>
   </ul>
   <ul class="sp-sns" aria-label="SNSリンク">
@@ -77,13 +87,16 @@
           <a href="/" class="menu__link">トップ</a>
         </li>
         <li class="menu__item">
-          <a href="/#profile" class="menu__link">プロフィール</a>
+          <a href={profileLink} class="menu__link">プロフィール</a>
         </li>
         <li class="menu__item">
           <a href="/work-archive" class="menu__link">制作実績</a>
         </li>
         <li class="menu__item">
-          <a href="/#plan" class="menu__link">料金プラン</a>
+          <a href={planLink} class="menu__link">料金プラン</a>
+        </li>
+        <li class="menu__item">
+          <a href={contactLink} class="menu__link">お問い合わせ</a>
         </li>
       </ul>
     </nav>

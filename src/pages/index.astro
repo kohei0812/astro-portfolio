@@ -5,6 +5,7 @@ import Challenges from "../components/top/Challenges.astro";
 import Profile from "../components/top/Profile.astro";
 import Works from "../components/top/works/Works.astro";
 import Plan from "../components/top/Plan.astro";
+import ContactForm from "../components/ContactForm.jsx";
 ---
 
 <Layout
@@ -28,5 +29,6 @@ import Plan from "../components/top/Plan.astro";
     <Profile />
     <Works />
     <Plan />
+    <ContactForm client:load/>
   </main>
 </Layout>

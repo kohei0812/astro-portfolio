@@ -41,7 +41,7 @@
         overflow: hidden;
 
         &.none {
-          display: none;
+          color: v.$color-primary;
         }
 
         .hero-text-swiper {
@@ -113,7 +113,7 @@
         overflow: hidden;
 
         &.none {
-          display: none;
+           color: v.$color-primary;
         }
 
         .hero-text-swiper {

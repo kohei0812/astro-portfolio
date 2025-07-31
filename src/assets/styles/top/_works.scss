@@ -177,8 +177,8 @@
                 &__item {
                     margin: 0 auto;
                     transform: skew(-22.5deg);
-                    margin-right: 7%;
-                    margin-left: 7%;
+                    margin-right: 3%;
+                    margin-left: 3%;
 
                     .slider {
 
@@ -237,15 +237,13 @@
                                 color: white;
                                 font-weight: bold;
                                 white-space: nowrap;
-                                /* 改行させない */
                                 overflow: hidden;
-                                /* はみ出た部分を隠す */
                                 text-overflow: ellipsis;
-                                /* 「…」で省略表示 */
                             }
                         }
 
                         &.left {
+                            margin-left:3%;
 
                             .slider-link__cat {
                                 margin-top: 20px;
@@ -263,12 +261,15 @@
                             }
 
                             .slider-link__thumb {
-                                margin-top: 18px;
+                                margin: 18px auto;
+                                margin-left: auto;
+                                margin-right: 0;
                             }
                         }
 
                         &.right {
                             margin-top: 30px;
+                            margin-left: 2%;
 
                             .slider-item {
                                 display: flex;
@@ -277,15 +278,17 @@
 
                             .slider-link__cat {
                                 margin-bottom: 20px;
-                                display: flex;
+                              display: flex;
                                 align-items: center;
-                                margin-left: 8%;
+                                justify-content: flex-end;
+                               margin-right: 15%;
                             }
 
                             .slider-link__ttl {
                                 line-height: 1.6;
                                 margin-bottom: 20px;
-                                margin-left: 8%;
+                                  text-align: end;
+                               margin-right: 15%;
                             }
                         }
                     }

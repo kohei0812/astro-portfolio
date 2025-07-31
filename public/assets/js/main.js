@@ -22,10 +22,6 @@ jQuery(function ($) {
       $("body,html").animate({ scrollTop: position }, speed, "swing");
     }
   });
-  $(".sp-nav .menu__item").on("click", function () {
-    $(".sp-nav").toggleClass("active");
-    $(".hamburger-menu").toggleClass("hamburger-menu--open");
-  });
   /******************* */
   /*  ページ内スクロール  */
   /******************* */
@@ -43,6 +39,8 @@ jQuery(function ($) {
       var position = target.offset().top;
       // スムーススクロール
       $("body,html").animate({ scrollTop: position }, speed, "swing");
+      $(".sp-nav").removeClass("active");
+      $(".hamburger-menu").removeClass("hamburger-menu--open");
       return false;
     });
   });
