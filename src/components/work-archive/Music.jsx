@@ -42,15 +42,6 @@ export default function Music() {
                     })}
 
                 </ul>
-                <div class="work-archive-cta cta">
-                    <p class="cta-p">無料で相談してみる</p>
-                    <a
-                        href="/#contact"
-                        target="_blank"
-                        class="cta-link"
-                        rel="noopener noreferrer">詳しくはこちら
-                    </a>
-                </div>
             </div>
         </section>
     );

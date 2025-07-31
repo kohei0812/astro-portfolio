@@ -159,7 +159,7 @@ export default function ContactForm() {
   return (
     <section className="contact-form" id="contact">
       <div className="container">
-        <span class="section-ttl eng">Contact</span>
+        <span className="section-ttl eng">Contact</span>
         <div className="form-header">
           <h2 className="contact-form__title">お問い合わせ</h2>
           <p className="contact-form__desc">
