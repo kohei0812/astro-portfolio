@@ -348,13 +348,21 @@ img {
 
         &.facebook {
           a {
-            width: 32px;
+            width: 26px;
+            img{
+              width: 100%;
+              height: auto;
+            }
           }
         }
 
         &.instagram {
           a {
             width: 26px;
+            img{
+              width: 100%;
+              height: auto;
+            }
           }
         }
 

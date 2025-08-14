@@ -21,7 +21,12 @@ export default function Music() {
                                 <article>
                                     <a href={`/music/${post.slug}/`}>
                                         <figure className="work-archive-item__thumb">
-                                            <img src={thumbnail} alt="サムネイル画像" />
+                                            <img src={thumbnail}
+                                                width="200"
+                                                height="100"
+                                                loading="lazy"
+                                                decoding="async"
+                                                alt="サムネイル画像" />
                                             <figcaption className="visually-hidden" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
                                         </figure>
                                         {post._embedded?.['wp:term']?.[0]?.length > 0 && (

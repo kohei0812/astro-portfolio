@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import Swiper from 'swiper';
-import { Autoplay } from 'swiper/modules'; 
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 export default function LeftWork() {
@@ -14,7 +14,7 @@ export default function LeftWork() {
       .then(data => setPosts(data))
       .catch(err => console.error(err));
   }, []);
-  
+
   // Swiper初期化処理（direction変更対応）
   const initSwiper = () => {
     if (!sliderRef.current) return;
@@ -56,7 +56,7 @@ export default function LeftWork() {
           return (
             <div key={post.id} className="slider-item swiper-slide">
               <a href={`/posts/${post.slug}/`} className="slider-link">
-                 {post._embedded?.['wp:term']?.[0]?.length > 0 && (
+                {post._embedded?.['wp:term']?.[0]?.length > 0 && (
                   <div className="slider-link__cat sp_only">
                     {post._embedded['wp:term'][0].map((cat) => (
                       <small key={cat.id}><span>{cat.name}</span></small>
@@ -68,7 +68,10 @@ export default function LeftWork() {
                   dangerouslySetInnerHTML={{ __html: post.title.rendered }}
                 />
                 <div className="slider-link__thumb">
-                  <img src={thumbnail} alt="サムネイル画像" />
+                  <img src={thumbnail} width="200"
+                    height="200"
+                    loading="lazy"
+                    decoding="async" alt="サムネイル画像" />
                 </div>
                 {post._embedded?.['wp:term']?.[0]?.length > 0 && (
                   <div className="slider-link__cat pc_only">

@@ -1,8 +1,19 @@
 ---
 //src/components/top/Profile.astro
 ---
+
 <section class="profile" id="profile" aria-labelledby="profile-heading">
-  <div class="profile-bg"></div>
+  <picture class="profile-bg">
+    <source media="(min-width: 769px)" srcset="/assets/images/profile-bg.jpg" />
+    <img
+      src="/assets/images/profile-bgSP.jpg"
+      alt="背景画像"
+      width="1000"
+      height="800"
+      loading="lazy"
+      decoding="async"
+    />
+  </picture>
   <div class="container">
     <h2 class="profile-ttl eng section-ttl" id="profile-heading">Profile</h2>
     <p class="profile-name">
@@ -11,7 +22,14 @@
     </p>
     <div class="profile-main">
       <div class="profile-main__left">
-        <img src="/assets/images/profile-main.jpg" alt="顔写真" />
+        <img
+          src="/assets/images/profile-main.jpg"
+          width="524"
+          height="200"
+          loading="lazy"
+          decoding="async"
+          alt="顔写真"
+        />
       </div>
       <p class="profile-main__right desc">
         神戸大学法学部卒業後、新卒でSIerに営業職で入社するものの、レールに乗った人生の在り方に疑問を感じ退職。<br

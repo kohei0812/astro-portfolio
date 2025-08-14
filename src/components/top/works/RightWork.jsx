@@ -14,37 +14,37 @@ export default function LeftWork() {
             .catch(err => console.error(err));
     }, []);
 
-   // Swiper初期化処理（direction変更対応）
-  const initSwiper = () => {
-    if (!sliderRef.current) return;
+    // Swiper初期化処理（direction変更対応）
+    const initSwiper = () => {
+        if (!sliderRef.current) return;
 
-    const isMobile = window.innerWidth <= 768;
-    // 既存インスタンス破棄
-    if (swiperInstance.current) {
-      swiperInstance.current.destroy(true, true);
-    }
+        const isMobile = window.innerWidth <= 768;
+        // 既存インスタンス破棄
+        if (swiperInstance.current) {
+            swiperInstance.current.destroy(true, true);
+        }
 
-    // 新規インスタンス作成
-    swiperInstance.current = new Swiper(sliderRef.current, {
-      direction: isMobile ? 'horizontal' : 'vertical',
-      loop: true,
-      modules: [Autoplay],
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-        reverseDirection: !isMobile,
-      },
-    });
-  };
+        // 新規インスタンス作成
+        swiperInstance.current = new Swiper(sliderRef.current, {
+            direction: isMobile ? 'horizontal' : 'vertical',
+            loop: true,
+            modules: [Autoplay],
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+                reverseDirection: !isMobile,
+            },
+        });
+    };
 
-  // 初回・リサイズ時に Swiper 再構築
-  useEffect(() => {
-    if (posts.length > 0) {
-      initSwiper();
-      window.addEventListener('resize', initSwiper);
-      return () => window.removeEventListener('resize', initSwiper);
-    }
-  }, [posts]);
+    // 初回・リサイズ時に Swiper 再構築
+    useEffect(() => {
+        if (posts.length > 0) {
+            initSwiper();
+            window.addEventListener('resize', initSwiper);
+            return () => window.removeEventListener('resize', initSwiper);
+        }
+    }, [posts]);
     return (
         <div className="works-archive__item right swiper" ref={sliderRef}>
             <div className="slider right swiper-wrapper">
@@ -66,7 +66,10 @@ export default function LeftWork() {
                                     dangerouslySetInnerHTML={{ __html: post.title.rendered }}
                                 />
                                 <div className="slider-link__thumb">
-                                    <img src={thumbnail} alt="サムネイル画像" />
+                                    <img src={thumbnail} width="200"
+                                        height="100"
+                                        loading="lazy"
+                                        decoding="async" alt="サムネイル画像" />
                                 </div>
                             </a>
                         </div>
