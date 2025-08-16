@@ -71,7 +71,7 @@ export default function LeftWork() {
                   <img src={thumbnail} width="200"
                     height="200"
                     loading="lazy"
-                    decoding="async" alt="サムネイル画像" />
+                    decoding="async" alt={post.title.rendered.replace(/<[^>]*>/g, '') || 'サムネイル画像'} />
                 </div>
                 {post._embedded?.['wp:term']?.[0]?.length > 0 && (
                   <div className="slider-link__cat pc_only">

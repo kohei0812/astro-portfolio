@@ -4,7 +4,9 @@
 
 <section class="profile" id="profile" aria-labelledby="profile-heading">
   <picture class="profile-bg">
+    <source media="(min-width: 769px)" srcset="/assets/images/profile-bg.webp" type="image/webp" />
     <source media="(min-width: 769px)" srcset="/assets/images/profile-bg.jpg" />
+    <source srcset="/assets/images/profile-bgSP.webp" type="image/webp" />
     <img
       src="/assets/images/profile-bgSP.jpg"
       alt="背景画像"
@@ -22,14 +24,17 @@
     </p>
     <div class="profile-main">
       <div class="profile-main__left">
-        <img
-          src="/assets/images/profile-main.jpg"
-          width="524"
-          height="200"
-          loading="lazy"
-          decoding="async"
-          alt="顔写真"
-        />
+        <picture>
+          <source srcset="/assets/images/profile-main.webp" type="image/webp" />
+          <img
+            src="/assets/images/profile-main.jpg"
+            width="524"
+            height="200"
+            loading="lazy"
+            decoding="async"
+            alt="顔写真"
+          />
+        </picture>
       </div>
       <p class="profile-main__right desc">
         神戸大学法学部卒業後、新卒でSIerに営業職で入社するものの、レールに乗った人生の在り方に疑問を感じ退職。<br

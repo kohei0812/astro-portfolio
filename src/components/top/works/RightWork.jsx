@@ -69,7 +69,7 @@ export default function LeftWork() {
                                     <img src={thumbnail} width="200"
                                         height="100"
                                         loading="lazy"
-                                        decoding="async" alt="サムネイル画像" />
+                                        decoding="async" alt={post.title.rendered.replace(/<[^>]*>/g, '') || 'サムネイル画像'} />
                                 </div>
                             </a>
                         </div>

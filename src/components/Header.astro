@@ -14,7 +14,7 @@ const contactLink = isTopPage ? "#contact" : "/#contact";
   <div class="loader" aria-hidden="true"></div>
 </div>
 <!-- sp-nav -->
-<nav class="sp-nav" aria-label="スマートフォン用ナビゲーション">
+<nav class="sp-nav" id="sp-nav" aria-label="スマートフォン用ナビゲーション">
   <ul class="menu">
     <li class="menu__item">
       <a href="/" class="menu__link">トップ</a>
@@ -40,14 +40,17 @@ const contactLink = isTopPage ? "#contact" : "/#contact";
         class="sp-sns__link"
         aria-label="facebook"
       >
-        <img
-          src="/assets/images/facebook.svg"
-          width="26"
-          height="26"
-          loading="lazy"
-          decoding="async"
-          alt="facebook"
-        />
+        <picture>
+          <source srcset="/assets/images/facebook.webp" type="image/webp" />
+          <img
+            src="/assets/images/facebook.png"
+            width="32"
+            height="32"
+            loading="lazy"
+            decoding="async"
+            alt="facebook"
+          />
+        </picture>
       </a>
     </li>
     <li class="sp-sns__item">
@@ -57,14 +60,17 @@ const contactLink = isTopPage ? "#contact" : "/#contact";
         class="sp-sns__link"
         aria-label="instagram"
       >
-        <img
-          src="/assets/images/instagram.svg"
-          width="26"
-          height="26"
-          loading="lazy"
-          decoding="async"
-          alt="instagram"
-        />
+        <picture>
+          <source srcset="/assets/images/instagram.webp" type="image/webp" />
+          <img
+            src="/assets/images/instagram.png"
+            width="26"
+            height="26"
+            loading="lazy"
+            decoding="async"
+            alt="instagram"
+          />
+        </picture>
       </a>
     </li>
     <li class="sp-sns__item">
@@ -74,14 +80,17 @@ const contactLink = isTopPage ? "#contact" : "/#contact";
         class="sp-sns__link"
         aria-label="x"
       >
-        <img
-          src="/assets/images/x.svg"
-          width="26"
-          height="26"
-          loading="lazy"
-          decoding="async"
-          alt="x"
-        />
+        <picture>
+          <source srcset="/assets/images/x.webp" type="image/webp" />
+          <img
+            src="/assets/images/x.png"
+            width="26"
+            height="26"
+            loading="lazy"
+            decoding="async"
+            alt="x"
+          />
+        </picture>
       </a>
     </li>
   </ul>
@@ -91,6 +100,8 @@ const contactLink = isTopPage ? "#contact" : "/#contact";
   class="hamburger-menu"
   id="js-hamburger-menu"
   aria-label="メニューを開く"
+  aria-expanded="false"
+  aria-controls="sp-nav"
 >
   <span class="hamburger-menu__bar"></span>
   <span class="hamburger-menu__bar"></span>
@@ -100,14 +111,17 @@ const contactLink = isTopPage ? "#contact" : "/#contact";
 <header class="header" id="header" role="banner">
   <div class="container">
     <a href="/" class="header-logo" aria-label="トップページへ">
-      <img
-        src="/assets/images/logo.png"
-        width="140"
-        height="50"
-        loading="lazy"
-        decoding="async"
-        alt="Dynamis"
-      />
+      <picture>
+        <source srcset="/assets/images/logo.webp" type="image/webp" />
+        <img
+          src="/assets/images/logo.png"
+          width="140"
+          height="50"
+          loading="lazy"
+          decoding="async"
+          alt="Dynamis"
+        />
+      </picture>
     </a>
     <nav class="header-nav" aria-label="メインナビゲーション">
       <ul class="menu">

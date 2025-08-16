@@ -26,7 +26,7 @@ export default function Post() {
                                                 height="100"
                                                 loading="lazy"
                                                 decoding="async"
-                                                src={thumbnail} alt="サムネイル画像" />
+                                                src={thumbnail} alt={post.title.rendered.replace(/<[^>]*>/g, '') || 'サムネイル画像'} />
                                             <figcaption className="visually-hidden" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
                                         </figure>
                                         {post._embedded?.['wp:term']?.[0]?.length > 0 && (

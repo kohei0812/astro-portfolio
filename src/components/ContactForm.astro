@@ -37,7 +37,9 @@ const FIELD_IDS = {
           minlength="2"
           maxlength="50"
           placeholder="山田太郎"
+          aria-describedby="name-help"
         >
+        <small id="name-help" class="form-help">2文字以上50文字以内で入力してください</small>
       </div>
       
       <div class="form-group">
@@ -49,7 +51,9 @@ const FIELD_IDS = {
           class="form-input" 
           required 
           placeholder="example@email.com"
+          aria-describedby="email-help"
         >
+        <small id="email-help" class="form-help">返信用のメールアドレスを入力してください</small>
       </div>
       
       <div class="form-group">
@@ -63,7 +67,9 @@ const FIELD_IDS = {
           minlength="5"
           maxlength="100"
           placeholder="お問い合わせの件名をご入力ください"
+          aria-describedby="subject-help"
         >
+        <small id="subject-help" class="form-help">5文字以上100文字以内で入力してください</small>
       </div>
       
       <div class="form-group">
@@ -77,7 +83,9 @@ const FIELD_IDS = {
           maxlength="2000"
           rows="6"
           placeholder="お問い合わせ内容を詳しくご記入ください"
+          aria-describedby="message-help"
         ></textarea>
+        <small id="message-help" class="form-help">10文字以上2000文字以内で詳しくご記入ください</small>
       </div>
       
       <!-- ハニーポットフィールド（スパム対策） -->
